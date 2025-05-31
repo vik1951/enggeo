@@ -1,0 +1,1277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="glina_A3L" pageWidth="1191" pageHeight="842" orientation="Landscape" columnWidth="1076" leftMargin="70" rightMargin="45" topMargin="55" bottomMargin="55" whenResourceMissingType="Error" uuid="39edf4c1-8ef4-4508-ace5-a6e406510e94">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapterEnGeo.xml"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[SELECT vglina.*, 
+ispol.doljnost, 
+ispol.fio,
+idburehole.numdoc,
+idburehole.sost,
+idburehole.sost_2,
+idburehole.prover,
+idburehole.prover_2
+FROM vglina LEFT JOIN ispol ON vglina.id_labman = ispol.id, 
+idburehole
+WHERE vglina.id_burehole = idburehole.id AND vglina.id > 0
+ORDER BY id_obekt, vidhole, setnumhole(num_hole,7), glub_otbor]]>
+	</queryString>
+	<field name="id_obekt" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="id_obekt"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="archnum" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="archnum"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="stadia" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="stadia"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="logo" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.label" value="logo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="id_burehole" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="id_burehole"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="vidhole" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="vidhole"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="num_hole" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="num_hole"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="num_obrazec" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="num_obrazec"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="glub_otbor" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="glub_otbor"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="absotmotb" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="absotmotb"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="cvet" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="cvet"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="namecvet" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="namecvet"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="prosloi" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="prosloi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="nameprosloi" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nameprosloi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="vkluc" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="vkluc"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="newvkluc" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="newvkluc"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="namenewvkluc" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="namenewvkluc"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="textura" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="textura"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="nametextur" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nametextur"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="lab_num" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="lab_num"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="id_obrazec" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="id_obrazec"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="metod" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="metod"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="f200" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="f200"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="f200_10" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="f200_10"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="f10_5" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="f10_5"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="f5_2" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="f5_2"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="f2_1" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="f2_1"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="f1_05" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="f1_05"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="f05_025" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="f05_025"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="f025_01" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="f025_01"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="f01_" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="f01_"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="f01_005" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="f01_005"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="f005_001" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="f005_001"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="f001_0005" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="f001_0005"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="f0005_" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="f0005_"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="f0005_0001" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="f0005_0001"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="f0001_" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="f0001_"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="f2_005" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="f2_005"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="rakusha" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="rakusha"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="okatan" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="okatan"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="svgroup" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="svgroup"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="namegr" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="namegr"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="namegl" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="namegl"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="namekons" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="namekons"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="vlag" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="vlag"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="vlagtek" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="vlagtek"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="vlagrask" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="vlagrask"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="ip" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ip"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="il" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="il"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="plotn" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="plotn"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="plotnchast" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="plotnchast"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="plotnsk" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="plotnsk"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="e" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="e"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="koefvodonas" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="koefvodonas"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="otnnabuh" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="otnnabuh"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="namenabuh" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="namenabuh"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="otnprosad" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="otnprosad"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="nameprosad" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nameprosad"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="lipkost" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="lipkost"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="organika" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="organika"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="nameorg" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nameorg"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="steprazl" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="steprazl"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="stepzol" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="stepzol"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="zasol" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="zasol"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="namezasol" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="namezasol"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="puchenie" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="puchenie"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="namepuch" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="namepuch"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="temper" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="temper"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="nametemp" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nametemp"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="id_labman" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="id_labman"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vglina"/>
+	</field>
+	<field name="doljnost" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="doljnost"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ispol"/>
+	</field>
+	<field name="fio" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="fio"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="ispol"/>
+	</field>
+	<field name="numdoc" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="numdoc"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="idburehole"/>
+	</field>
+	<field name="sost" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="sost"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="idburehole"/>
+	</field>
+	<field name="sost_2" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="sost_2"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="idburehole"/>
+	</field>
+	<field name="prover" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="prover"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="idburehole"/>
+	</field>
+	<field name="prover_2" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="prover_2"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="idburehole"/>
+	</field>
+	<group name="Group1" isStartNewPage="true" minDetailsToStartFromTop="1">
+		<groupExpression><![CDATA[$F{id_obekt}]]></groupExpression>
+		<groupHeader>
+			<band height="30">
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="515" height="30" uuid="cd2f613c-fad3-4bb5-b1d9-da7188aa2036"/>
+					<box>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="10" isBold="true" isUnderline="false"/>
+						<paragraph leftIndent="5" spacingBefore="5" spacingAfter="0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Об'єкт: " + $F{name} + "\n" + "Стадія робіт: " + $F{stadia}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="0" y="0" width="1075" height="1" uuid="493577bf-f011-4ac0-9255-f8cdd89ada94"/>
+				</line>
+				<textField isBlankWhenNull="false">
+					<reportElement stretchType="RelativeToTallestObject" x="515" y="0" width="560" height="30" uuid="e200d446-d90e-4a5d-9988-43bc4226522f"/>
+					<box>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="50">
+				<textField>
+					<reportElement x="0" y="0" width="635" height="30" uuid="9e1f73fa-8a84-47e6-9316-b8addf98c88e"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Sans"/>
+						<paragraph lineSpacing="Single" spacingBefore="0"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Разом по об'єкту зразків: " + $V{Group1_COUNT}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="0" y="30" width="1075" height="20" uuid="e31d84fb-9a5f-44a5-bef7-5a6adb1b69fb"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="DejaVu Sans"/>
+					</textElement>
+					<textFieldExpression><![CDATA[IF($F{id_labman} > 0,  $F{doljnost} + " ____________________ " + $F{fio}, null)]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="Group2" minDetailsToStartFromTop="1">
+		<groupExpression><![CDATA[$F{vidhole} + $F{num_hole}]]></groupExpression>
+		<groupHeader>
+			<band height="20">
+				<textField isStretchWithOverflow="true">
+					<reportElement x="0" y="0" width="1075" height="20" uuid="c5f13514-e77f-42be-81fd-a50a0e6d80ce"/>
+					<box>
+						<topPen lineWidth="0.5"/>
+						<leftPen lineWidth="0.5"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" isBold="true" isItalic="false"/>
+						<paragraph leftIndent="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{vidhole} + " № " + $F{num_hole}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="65" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="1075" height="65" uuid="9d3a12ba-1fb7-4b2d-94d1-06d3ae036602"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Результати лабораторних визначень фізичних властивостей зв'язних ґрунтів]]></text>
+			</staticText>
+			<image>
+				<reportElement x="-1" y="0" width="64" height="64" uuid="4024db05-8a41-43ef-9d51-a574c0a36477"/>
+				<imageExpression><![CDATA[$F{logo}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="890" y="0" width="180" height="20" uuid="95fd8c37-909e-490f-9069-a64cbac44d4b"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{numdoc}.length() > 0,"Додаток " + $F{numdoc}, "")]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="150" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="50" height="150" backcolor="#E6E6E6" uuid="b46942c2-5982-4a88-b983-318185f3306b"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Лабораторний номер]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="80" y="0" width="50" height="150" backcolor="#E6E6E6" uuid="b2cd8a58-7cc2-4406-9eef-015af55b6510"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Глибина відбору, м]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="50" y="0" width="30" height="150" backcolor="#E6E6E6" uuid="71e877fc-21a9-4cac-8018-5ed0444d0ed2"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Номер зразка]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="130" y="0" width="50" height="150" backcolor="#E6E6E6" uuid="0e7e8086-d4d7-48cc-aed4-06e828bf4b4e"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Абсолютна позначка
+відбору, м]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="180" y="0" width="335" height="150" backcolor="#E6E6E6" uuid="ba9697e9-70b0-4396-8420-e4978463638b"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Найменування ґрунту (ДСТУ Б В.2.1-2-96)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="515" y="0" width="120" height="30" backcolor="#E6E6E6" uuid="b0a8837f-0957-4f7c-b4f0-f1a72070aa8a"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Вологість, %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="515" y="30" width="40" height="100" backcolor="#E6E6E6" uuid="732ff206-7831-436d-b72e-70cf6e78db2e"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Природна]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="555" y="30" width="40" height="100" backcolor="#E6E6E6" uuid="74699c6c-24c8-4c8b-a402-c7e2e5c98766"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<text><![CDATA[На границi текучостi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="595" y="30" width="40" height="100" backcolor="#E6E6E6" uuid="08f98541-77dc-46b9-8d9b-b5a2e91390a7"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[На границi розкочування]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="635" y="0" width="40" height="130" backcolor="#E6E6E6" uuid="da1cc7fa-8798-43ed-800c-bb4b77549734"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Число
+пластичностi, %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="675" y="0" width="40" height="130" backcolor="#E6E6E6" uuid="2912036b-e534-4517-8b65-efa2f17e3e75"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Показник
+текучостi, д.о.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="715" y="0" width="120" height="30" backcolor="#E6E6E6" uuid="dada4d8e-12e0-4233-b608-fe4cb0f9e931"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Щiльність, г/см3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="715" y="30" width="40" height="100" backcolor="#E6E6E6" uuid="a1e41494-3476-4f1a-8278-131dc58e0b96"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Природна]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="755" y="30" width="40" height="100" backcolor="#E6E6E6" uuid="36053ca1-8fa4-459d-8f9c-19ac0ec3ae2a"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Сухого ґрунту]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="515" y="130" width="40" height="20" backcolor="#E6E6E6" uuid="71b3b830-e802-4dbc-b9c1-90c556f5832b"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[W]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="555" y="130" width="40" height="20" backcolor="#E6E6E6" uuid="1d44637e-bcef-4f42-9ef5-22dd47d2f521"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[W]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="595" y="130" width="40" height="20" backcolor="#E6E6E6" uuid="11c5528f-d5f4-4242-a01d-0dafe2dea5a5"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Wp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="635" y="130" width="40" height="20" backcolor="#E6E6E6" uuid="e60ec9f1-eaae-4a4a-809b-587eb98a16f6"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Ip]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="675" y="130" width="40" height="20" backcolor="#E6E6E6" uuid="55c815d4-a1a1-4052-837e-a332ef52a54f"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[I]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="715" y="130" width="40" height="20" backcolor="#E6E6E6" uuid="e0a4de45-5107-48d1-ac41-9f15045411a1"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[ρ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="755" y="130" width="40" height="20" backcolor="#E6E6E6" uuid="637a4322-0550-4827-ae27-a048b74ef852"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[ρd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="835" y="0" width="40" height="130" backcolor="#E6E6E6" uuid="3dd3ed80-cdb1-444e-aaf9-480a7588e78e"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Коефiцiєнт
+пористості, д.о.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="835" y="130" width="40" height="20" backcolor="#E6E6E6" uuid="d8c3292b-b010-4b62-b336-b44db45bd452"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[e]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="875" y="0" width="40" height="130" backcolor="#E6E6E6" uuid="0756d8fc-2cea-4bfe-b968-02d11dd29a1b"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Коефiцiєнт
+водонасичення, д.о.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="875" y="130" width="40" height="20" backcolor="#E6E6E6" uuid="ad765f11-776f-448e-b6d0-f4e2bc381890"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Sr]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="795" y="30" width="40" height="100" backcolor="#E6E6E6" uuid="6e668fc0-2799-4977-85f5-730edb0d46bb"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Часток ґрунту]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="795" y="130" width="40" height="20" backcolor="#E6E6E6" uuid="b742c2d6-9bca-437d-bec9-8551a51baf96"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[ρs]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1035" y="0" width="40" height="130" backcolor="#E6E6E6" uuid="dd354a49-f430-48be-8f8e-380577cf8775"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Вiдносний вмiст
+органiчних речовин
+д.о.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1035" y="130" width="40" height="20" backcolor="#E6E6E6" uuid="9cdb65a4-720f-4466-a9b1-8512650607f6"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Ir]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="915" y="0" width="40" height="130" backcolor="#E6E6E6" uuid="6dde91ed-3f77-46e7-87eb-a626e4e57c19"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Вiдносна деформацiя набухання без навантаження, д.о.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="915" y="130" width="40" height="20" backcolor="#E6E6E6" uuid="66e42015-ba37-4eaf-b386-6c117f0a3a6f"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph spacingBefore="0" spacingAfter="0"/>
+				</textElement>
+				<text><![CDATA[Esw]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="955" y="0" width="40" height="130" backcolor="#E6E6E6" uuid="35970ae3-2d9b-4435-a75c-14effb1adb30"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Вiдносна деформацiя просiдання, д.о.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="955" y="130" width="40" height="20" backcolor="#E6E6E6" uuid="529ae088-df7c-43bb-8ffd-3a3ecd7dbeeb"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Esl]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="995" y="0" width="40" height="130" backcolor="#E6E6E6" uuid="7af0769e-1ef4-4797-82af-99c9e442aac1"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="Left">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Липкість, г/см2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="995" y="130" width="40" height="20" backcolor="#E6E6E6" uuid="80e15ebf-c2c0-43f4-97c8-85fcdc30f2e0"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[L]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="555" y="130" width="40" height="20" backcolor="#E6E6E6" uuid="019d2933-79db-4de5-b9df-ac4f945d1608"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+					<font fontName="DejaVu Sans" size="8"/>
+					<paragraph spacingBefore="5" spacingAfter="0"/>
+				</textElement>
+				<text><![CDATA[      L]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="675" y="130" width="40" height="20" backcolor="#E6E6E6" uuid="44b80061-cb5e-4604-bba2-57382c5bf89f"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+					<font fontName="DejaVu Sans" size="8"/>
+					<paragraph spacingBefore="5"/>
+				</textElement>
+				<text><![CDATA[   L]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Prevent">
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="ElementGroupHeight" x="0" y="0" width="50" height="20" uuid="75e67938-9d4e-4c4c-bbf8-cec9507f3e70"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10" isBold="false"/>
+					<paragraph leftIndent="5" spacingBefore="2" spacingAfter="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lab_num}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="ElementGroupHeight" x="80" y="0" width="50" height="20" uuid="c0904cf1-4ba0-4669-b673-13c4122d1f3d"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5" spacingBefore="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{glub_otbor}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="ElementGroupHeight" x="50" y="0" width="30" height="20" uuid="9545b8a2-78dd-4edb-868f-d1ac43317392"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5" spacingBefore="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{num_obrazec}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="ElementGroupHeight" x="130" y="0" width="50" height="20" uuid="df9103cc-07e3-4c71-9029-cc425ad14c49"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5" spacingBefore="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{absotmotb}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="ElementGroupHeight" x="180" y="0" width="335" height="20" uuid="3628ab91-e018-48a7-94bb-d42c500a58c4"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph lineSpacing="Proportional" leftIndent="5" rightIndent="5" spacingBefore="2" spacingAfter="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{namegl} + $F{namecvet} + $F{namekons} + $F{namenabuh} + $F{nameprosad} + $F{nameorg} + $F{namegr} + $F{nametextur} + $F{nameprosloi} + IF(LEN($F{namenewvkluc}) > 0, ".\n" +  $F{namenewvkluc}, "")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="ElementGroupHeight" x="515" y="0" width="40" height="20" uuid="0da62882-9afe-4724-9e25-dd693aa811a4"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vlag}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="ElementGroupHeight" x="555" y="0" width="40" height="20" uuid="51203fd5-77d6-4c84-9e7f-fd6afc6f8f33"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vlagtek}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="ElementGroupHeight" x="595" y="0" width="40" height="20" uuid="82c42fd0-dcbd-433d-8206-be39515ec746"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vlagrask}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="ElementGroupHeight" x="635" y="0" width="40" height="20" uuid="960ca2fe-ed93-41ac-b397-a96e95cbce68"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ip}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="ElementGroupHeight" x="675" y="0" width="40" height="20" uuid="a217d054-7ab6-4473-ba47-db649fe29f73"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{il}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="715" y="0" width="40" height="20" uuid="249e79ec-5ce3-48e2-8961-4a64b09bb439"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{plotn}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="755" y="0" width="40" height="20" uuid="029c0699-278e-4770-b8b7-912689a0fdb1"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{plotnsk}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="835" y="0" width="40" height="20" uuid="525c098a-9ebd-4856-adf0-2bb08c579799"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{plotnsk}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="875" y="0" width="40" height="20" uuid="c5cbfd46-2c51-47ab-9859-c71134a467f5"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{koefvodonas}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="795" y="0" width="40" height="20" uuid="2e0552ac-a0ea-4143-aa9e-1d706b465069"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{plotnchast}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="1035" y="0" width="40" height="20" uuid="f93417e8-6a86-435e-b94d-f8b8cf2e9323"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{organika}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="915" y="0" width="40" height="20" uuid="46de24d9-9acc-4ea3-9b87-67adf83ee020"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{otnnabuh}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="955" y="0" width="40" height="20" uuid="547141dd-5acc-482a-99a1-208b9b8bf409"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{otnprosad}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToTallestObject" x="995" y="0" width="40" height="20" uuid="5edb59d9-1cc8-4ec1-8258-306285a647b0"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans"/>
+					<paragraph rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lipkost}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="50">
+			<textField>
+				<reportElement x="770" y="0" width="300" height="20" uuid="8e4373e1-ef85-43d6-803a-da59b3dbc186"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{sost}.length() > 0," ____________________ " + $F{sost}, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="30" width="400" height="20" uuid="1e0037a4-9499-4e23-b20d-c8ae1d31664c"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{prover_2}.length() > 0,"Перевірив: " + $F{prover_2}, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="770" y="30" width="300" height="20" uuid="996c2144-9afd-457a-9dfe-a32a5ae8b535"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{prover}.length() > 0," ____________________ " + $F{prover}, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="400" height="20" uuid="711515cc-d7da-44cb-9620-9ccd9f09771d"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{sost_2}.length() > 0,"Склав: " + $F{sost_2}, "")]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

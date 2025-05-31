@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EGMainWindow</class>
+ <widget class="QMainWindow" name="EGMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1500</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Інженерна геологія</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../icons/16x16/applications-engineering.png</normaloff>../icons/16x16/applications-engineering.png</iconset>
+  </property>
+  <property name="locale">
+   <locale language="Ukrainian" country="Ukraine"/>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>22</width>
+    <height>22</height>
+   </size>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QMdiArea" name="mdiArea">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1500</width>
+      <height>820</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="background">
+     <brush brushstyle="SolidPattern">
+      <color alpha="180">
+       <red>180</red>
+       <green>180</green>
+       <blue>180</blue>
+      </color>
+     </brush>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1500</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="geometry">
+     <rect>
+      <x>298</x>
+      <y>129</y>
+      <width>236</width>
+      <height>404</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="acceptDrops">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="action_2"/>
+    <addaction name="action_6"/>
+    <addaction name="separator"/>
+    <addaction name="action_5"/>
+    <addaction name="action_3"/>
+    <addaction name="separator"/>
+    <addaction name="action_8"/>
+    <addaction name="action_9"/>
+    <addaction name="action_10"/>
+    <addaction name="action_11"/>
+    <addaction name="separator"/>
+    <addaction name="action_13"/>
+    <addaction name="action_14"/>
+    <addaction name="separator"/>
+    <addaction name="action_16"/>
+    <addaction name="action_17"/>
+    <addaction name="action_18"/>
+    <addaction name="separator"/>
+    <addaction name="action_19"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Правка</string>
+    </property>
+    <addaction name="action_7"/>
+    <addaction name="action_23"/>
+    <addaction name="separator"/>
+    <addaction name="action_29"/>
+    <addaction name="action_30"/>
+    <addaction name="action_31"/>
+    <addaction name="separator"/>
+    <addaction name="action_32"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>Налаштування</string>
+    </property>
+    <addaction name="action_42"/>
+    <addaction name="action_41"/>
+    <addaction name="action_36"/>
+    <addaction name="action_37"/>
+   </widget>
+   <widget class="QMenu" name="menu_6">
+    <property name="title">
+     <string>Вікно</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_7">
+    <property name="title">
+     <string>Довідка</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_8">
+    <property name="title">
+     <string>Поле</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="action_4"/>
+    <addaction name="separator"/>
+    <addaction name="action_12"/>
+    <addaction name="action_15"/>
+   </widget>
+   <widget class="QMenu" name="menu_9">
+    <property name="title">
+     <string>Лабораторія</string>
+    </property>
+    <addaction name="action_46"/>
+    <addaction name="action_21"/>
+    <addaction name="action_22"/>
+    <addaction name="action_20"/>
+    <addaction name="separator"/>
+    <addaction name="action_24"/>
+    <addaction name="action_25"/>
+    <addaction name="action_39"/>
+    <addaction name="action_40"/>
+    <addaction name="action_26"/>
+    <addaction name="action_27"/>
+    <addaction name="action_38"/>
+    <addaction name="separator"/>
+    <addaction name="action_44"/>
+    <addaction name="action_45"/>
+   </widget>
+   <widget class="QMenu" name="menu_10">
+    <property name="title">
+     <string>Інструменти</string>
+    </property>
+    <addaction name="action_34"/>
+    <addaction name="action_35"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>Проект</string>
+    </property>
+    <addaction name="action"/>
+    <addaction name="action_28"/>
+    <addaction name="action_33"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_4"/>
+   <addaction name="menu_8"/>
+   <addaction name="menu_9"/>
+   <addaction name="menu_10"/>
+   <addaction name="menu_6"/>
+   <addaction name="menu_7"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_2"/>
+   <addaction name="action_6"/>
+   <addaction name="action_5"/>
+   <addaction name="action_3"/>
+   <addaction name="action_8"/>
+   <addaction name="action_9"/>
+   <addaction name="action_10"/>
+   <addaction name="action_11"/>
+   <addaction name="action_13"/>
+   <addaction name="action_14"/>
+   <addaction name="action_16"/>
+   <addaction name="action_17"/>
+   <addaction name="action_18"/>
+   <addaction name="action_19"/>
+   <addaction name="separator"/>
+   <addaction name="action_7"/>
+   <addaction name="action_23"/>
+   <addaction name="action_29"/>
+   <addaction name="action_30"/>
+   <addaction name="action_31"/>
+   <addaction name="action_32"/>
+   <addaction name="separator"/>
+   <addaction name="action"/>
+   <addaction name="action_28"/>
+   <addaction name="action_33"/>
+   <addaction name="separator"/>
+   <addaction name="action_4"/>
+   <addaction name="action_12"/>
+   <addaction name="action_15"/>
+   <addaction name="separator"/>
+   <addaction name="action_46"/>
+   <addaction name="action_21"/>
+   <addaction name="action_22"/>
+   <addaction name="action_20"/>
+   <addaction name="separator"/>
+   <addaction name="action_24"/>
+   <addaction name="action_25"/>
+   <addaction name="action_39"/>
+   <addaction name="action_40"/>
+   <addaction name="action_26"/>
+   <addaction name="action_27"/>
+   <addaction name="action_38"/>
+   <addaction name="separator"/>
+   <addaction name="action_44"/>
+   <addaction name="action_45"/>
+  </widget>
+  <action name="action_2">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/document-new.png</normaloff>../icons/22x22/document-new.png</iconset>
+   </property>
+   <property name="text">
+    <string>Новий запис</string>
+   </property>
+   <property name="statusTip">
+    <string>Додати новий запис в материнську таблицю</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/dialog-close.png</normaloff>../icons/22x22/dialog-close.png</iconset>
+   </property>
+   <property name="text">
+    <string>Закрити</string>
+   </property>
+   <property name="statusTip">
+    <string>Закрити  активне вікно</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="action_5">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/document-save.png</normaloff>../icons/22x22/document-save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Зберегти</string>
+   </property>
+   <property name="statusTip">
+    <string>Зберегти дані активного вікна</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="action_6">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/document-close.png</normaloff>../icons/22x22/document-close.png</iconset>
+   </property>
+   <property name="text">
+    <string>Видалити запис</string>
+   </property>
+   <property name="statusTip">
+    <string>Видалити поточний запис з материнської таблиці</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="action_8">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/go-first-view.png</normaloff>../icons/22x22/go-first-view.png</iconset>
+   </property>
+   <property name="text">
+    <string>Перша</string>
+   </property>
+   <property name="statusTip">
+    <string>Перейти на перший запис материнської таблиці</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Home</string>
+   </property>
+  </action>
+  <action name="action_9">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/go-previous-view.png</normaloff>../icons/22x22/go-previous-view.png</iconset>
+   </property>
+   <property name="text">
+    <string>Попередня</string>
+   </property>
+   <property name="statusTip">
+    <string>Перейти на попередній запис материнський таблиці</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+PgUp</string>
+   </property>
+  </action>
+  <action name="action_10">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/go-next-view.png</normaloff>../icons/22x22/go-next-view.png</iconset>
+   </property>
+   <property name="text">
+    <string>Наступна</string>
+   </property>
+   <property name="statusTip">
+    <string>Перейти на наступний запис материнської таблиці</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+PgDown</string>
+   </property>
+  </action>
+  <action name="action_11">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/go-last-view.png</normaloff>../icons/22x22/go-last-view.png</iconset>
+   </property>
+   <property name="text">
+    <string>Остання</string>
+   </property>
+   <property name="statusTip">
+    <string>Перейти на останній запис материнської таблиці</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+End</string>
+   </property>
+  </action>
+  <action name="action_13">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/view-sort-ascending.png</normaloff>../icons/22x22/view-sort-ascending.png</iconset>
+   </property>
+   <property name="text">
+    <string>Відсортувати</string>
+   </property>
+   <property name="statusTip">
+    <string>Сортування записів материнської таблиці</string>
+   </property>
+  </action>
+  <action name="action_14">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/view-sort-del.png</normaloff>../icons/22x22/view-sort-del.png</iconset>
+   </property>
+   <property name="text">
+    <string>Скасувати сортування</string>
+   </property>
+   <property name="statusTip">
+    <string>Скасування сортування записів материнської таблиці</string>
+   </property>
+  </action>
+  <action name="action_16">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/document-preview.png</normaloff>../icons/22x22/document-preview.png</iconset>
+   </property>
+   <property name="text">
+    <string>Звіт ...</string>
+   </property>
+   <property name="statusTip">
+    <string>Підготувати звіт з використанням параметрів запиту</string>
+   </property>
+  </action>
+  <action name="action_17">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/document-print-direct.png</normaloff>../icons/22x22/document-print-direct.png</iconset>
+   </property>
+   <property name="text">
+    <string>Установка  принтера...</string>
+   </property>
+   <property name="statusTip">
+    <string>Встановити принтер і параметри друку</string>
+   </property>
+  </action>
+  <action name="action_18">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/document-export.png</normaloff>../icons/22x22/document-export.png</iconset>
+   </property>
+   <property name="text">
+    <string>Експорт ...</string>
+   </property>
+   <property name="statusTip">
+    <string>Підготувати і експортувати пакет даних</string>
+   </property>
+  </action>
+  <action name="action_19">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/application-exit.png</normaloff>../icons/22x22/application-exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Вихід</string>
+   </property>
+   <property name="statusTip">
+    <string>Закрити головне вікно і вийти з програми</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/crane.png</normaloff>../icons/22x22/crane.png</iconset>
+   </property>
+   <property name="text">
+    <string>Об'єкт</string>
+   </property>
+   <property name="toolTip">
+    <string>Об'єкт</string>
+   </property>
+   <property name="statusTip">
+    <string>Характеристика об'єкту</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/Burehole.png</normaloff>../icons/22x22/Burehole.png</iconset>
+   </property>
+   <property name="text">
+    <string>Виробки з відбором проб</string>
+   </property>
+   <property name="statusTip">
+    <string>Характеристика виробки з відбором проб</string>
+   </property>
+  </action>
+  <action name="action_12">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/szond.png</normaloff>../icons/22x22/szond.png</iconset>
+   </property>
+   <property name="text">
+    <string>Статичне зондування</string>
+   </property>
+   <property name="statusTip">
+    <string>Характеристика пункту статичного зондування</string>
+   </property>
+  </action>
+  <action name="action_15">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/dzond.png</normaloff>../icons/22x22/dzond.png</iconset>
+   </property>
+   <property name="text">
+    <string>Динамічне зондування</string>
+   </property>
+   <property name="statusTip">
+    <string>Характеристика пункту динамічного зондування</string>
+   </property>
+  </action>
+  <action name="action_20">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/office-chart-pie.png</normaloff>../icons/22x22/office-chart-pie.png</iconset>
+   </property>
+   <property name="text">
+    <string>Гранулометричний склад</string>
+   </property>
+   <property name="statusTip">
+    <string>Гранулометричний склад грунтів</string>
+   </property>
+  </action>
+  <action name="action_21">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/glina.png</normaloff>../icons/22x22/glina.png</iconset>
+   </property>
+   <property name="text">
+    <string>Властивості зв'язних ґрунтів</string>
+   </property>
+   <property name="statusTip">
+    <string>Фізичні та інші властивості зв'язних грунтів</string>
+   </property>
+  </action>
+  <action name="action_22">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/pesok.png</normaloff>../icons/22x22/pesok.png</iconset>
+   </property>
+   <property name="text">
+    <string>Властивості незв'язних ґрунтів</string>
+   </property>
+   <property name="statusTip">
+    <string>Фізичні та інші властивості незв'язних грунтів</string>
+   </property>
+  </action>
+  <action name="action_24">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/srez.png</normaloff>../icons/22x22/srez.png</iconset>
+   </property>
+   <property name="text">
+    <string>Одноплощинний зріз</string>
+   </property>
+   <property name="statusTip">
+    <string>Результати одноплощинних зрізних випробувань</string>
+   </property>
+  </action>
+  <action name="action_25">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/compres.png</normaloff>../icons/22x22/compres.png</iconset>
+   </property>
+   <property name="text">
+    <string>Компресійний стиск</string>
+   </property>
+   <property name="statusTip">
+    <string>Результати випробувань методом компресійного стиску</string>
+   </property>
+  </action>
+  <action name="action_26">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/prosad.png</normaloff>../icons/22x22/prosad.png</iconset>
+   </property>
+   <property name="text">
+    <string>Просадність</string>
+   </property>
+   <property name="statusTip">
+    <string>Результати випробування з визначення властивостей просідання</string>
+   </property>
+  </action>
+  <action name="action_27">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/nabuh.png</normaloff>../icons/22x22/nabuh.png</iconset>
+   </property>
+   <property name="text">
+    <string>Набухання</string>
+   </property>
+   <property name="statusTip">
+    <string>Результати випробування з визначення властивостей набухання</string>
+   </property>
+  </action>
+  <action name="action_7">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/edit-undo.png</normaloff>../icons/22x22/edit-undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Скасувати</string>
+   </property>
+   <property name="statusTip">
+    <string>Скасувати останні зміни</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="action_23">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/edit-redo.png</normaloff>../icons/22x22/edit-redo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Повторити</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Z</string>
+   </property>
+  </action>
+  <action name="action_29">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/edit-cut.png</normaloff>../icons/22x22/edit-cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>Вирізати</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="action_30">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/edit-copy.png</normaloff>../icons/22x22/edit-copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>Копіювати</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="action_31">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/edit-paste.png</normaloff>../icons/22x22/edit-paste.png</iconset>
+   </property>
+   <property name="text">
+    <string>Вставити</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="action_32">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/edit-select-all.png</normaloff>../icons/22x22/edit-select-all.png</iconset>
+   </property>
+   <property name="text">
+    <string>Виділити все</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="action_28">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/mail-signed-full.png</normaloff>../icons/22x22/mail-signed-full.png</iconset>
+   </property>
+   <property name="text">
+    <string>Комерційна пропозиція</string>
+   </property>
+   <property name="statusTip">
+    <string>Комерційна пропозиція</string>
+   </property>
+  </action>
+  <action name="action_33">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/mail-signed-shtamp.png</normaloff>../icons/22x22/mail-signed-shtamp.png</iconset>
+   </property>
+   <property name="text">
+    <string>Договір</string>
+   </property>
+   <property name="statusTip">
+    <string>Договорні забов'язання</string>
+   </property>
+  </action>
+  <action name="action_34">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/tools-wizard.png</normaloff>../icons/22x22/tools-wizard.png</iconset>
+   </property>
+   <property name="text">
+    <string>Геодезичний калькулятор</string>
+   </property>
+  </action>
+  <action name="action_35">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/office-chart-area-percentage.png</normaloff>../icons/22x22/office-chart-area-percentage.png</iconset>
+   </property>
+   <property name="text">
+    <string>Геологічний калькулятор</string>
+   </property>
+  </action>
+  <action name="action_36">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/preferences-desktop-user.png</normaloff>../icons/22x22/preferences-desktop-user.png</iconset>
+   </property>
+   <property name="text">
+    <string>Виконавці робіт</string>
+   </property>
+   <property name="statusTip">
+    <string>Виконавці робіт</string>
+   </property>
+  </action>
+  <action name="action_37">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/configure.png</normaloff>../icons/22x22/configure.png</iconset>
+   </property>
+   <property name="text">
+    <string>Бурове обладнання</string>
+   </property>
+   <property name="statusTip">
+    <string>Обладнання що використовувалось</string>
+   </property>
+  </action>
+  <action name="action_38">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/usadka.png</normaloff>../icons/22x22/usadka.png</iconset>
+   </property>
+   <property name="text">
+    <string>Усадка</string>
+   </property>
+   <property name="statusTip">
+    <string>Результати випробування з визначення властивостей усадки</string>
+   </property>
+  </action>
+  <action name="action_39">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/sjatie1.png</normaloff>../icons/22x22/sjatie1.png</iconset>
+   </property>
+   <property name="text">
+    <string>Одновісний стиск</string>
+   </property>
+   <property name="statusTip">
+    <string>Результати випробувань методом одновісного стиску</string>
+   </property>
+  </action>
+  <action name="action_40">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/sjatie3.png</normaloff>../icons/22x22/sjatie3.png</iconset>
+   </property>
+   <property name="text">
+    <string>Тривісний стиск</string>
+   </property>
+   <property name="statusTip">
+    <string>Результати випробувань методом тривісного стиску</string>
+   </property>
+  </action>
+  <action name="action_41">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/go-home.png</normaloff>../icons/22x22/go-home.png</iconset>
+   </property>
+   <property name="text">
+    <string>Підрядник</string>
+   </property>
+   <property name="statusTip">
+    <string>Підприємство-підрядник</string>
+   </property>
+  </action>
+  <action name="action_42">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/basket.png</normaloff>../icons/22x22/basket.png</iconset>
+   </property>
+   <property name="text">
+    <string>Замовник</string>
+   </property>
+   <property name="statusTip">
+    <string>Підприємство-замовник</string>
+   </property>
+  </action>
+  <action name="action_44">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/applications-science.png</normaloff>../icons/22x22/applications-science.png</iconset>
+   </property>
+   <property name="text">
+    <string>Корозійна агресивність ґрунту</string>
+   </property>
+   <property name="statusTip">
+    <string>Агресивність ґрунтів</string>
+   </property>
+  </action>
+  <action name="action_43">
+   <property name="text">
+    <string>Агресивність ґрунтів до металу</string>
+   </property>
+  </action>
+  <action name="action_45">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/applications-education-science.png</normaloff>../icons/22x22/applications-education-science.png</iconset>
+   </property>
+   <property name="text">
+    <string>Властивості води</string>
+   </property>
+  </action>
+  <action name="action_46">
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/22x22/scala.png</normaloff>../icons/22x22/scala.png</iconset>
+   </property>
+   <property name="text">
+    <string>Власивості скельних ґрунтів</string>
+   </property>
+   <property name="statusTip">
+    <string>Фізичні та інші властивості скельних грунтів</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+ <designerdata>
+  <property name="gridDeltaX">
+   <number>10</number>
+  </property>
+  <property name="gridDeltaY">
+   <number>10</number>
+  </property>
+  <property name="gridSnapX">
+   <bool>true</bool>
+  </property>
+  <property name="gridSnapY">
+   <bool>true</bool>
+  </property>
+  <property name="gridVisible">
+   <bool>true</bool>
+  </property>
+ </designerdata>
+</ui>

@@ -1,0 +1,1319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="agressgrpasp_A4P" pageWidth="595" pageHeight="842" columnWidth="480" leftMargin="70" rightMargin="45" topMargin="55" bottomMargin="55" uuid="cfb19b4a-18d1-494a-8f9b-6e60cc7beaca">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapterEnGeo.xml"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="163"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="826"/>
+	<property name="net.sf.jasperreports.print.create.bookmarks" value="true"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT vstatsrez_tgc.ige,
+ vstatsrez_tgc.name_strate,
+ vstatsrez_tgc.shema,
+ vbureholejurn.logo,
+ vstatsrez_tgc.statsrez_tgc[1] AS tgc1,
+ vstatsrez_tgc.statsrez_tgc[2] AS tgc2,
+ vstatsrez_tgc.statsrez_tgc[3] AS tgc3,
+ vstatsrez_tgc.statsrez_tgc[4] AS tg4,
+ vstatsrez_tgc.statsrez_tgc[5] AS c5,
+ vstatsrez_tgc.statsrez_tgc[6] AS tg6,
+ vstatsrez_tgc.statsrez_tgc[7] AS c7,
+ round(vstatsrez_tgc.statsrez_tgc[8], 4) AS tg8,
+ round(vstatsrez_tgc.statsrez_tgc[9], 4) AS c9,
+ round(vstatsrez_tgc.statsrez_tgc[10], 4) AS tg10,
+ round(vstatsrez_tgc.statsrez_tgc[11], 4) AS c11,
+ round(vstatsrez_tgc.statsrez_tgc[12], 4) AS tg12,
+ round(vstatsrez_tgc.statsrez_tgc[13], 4) AS c13,
+ round(vstatsrez_tgc.statsrez_tgc[14], 4) AS tg14,
+ round(vstatsrez_tgc.statsrez_tgc[15], 4) AS c15,
+ round(vstatsrez_tgc.statsrez_tgc[16], 4) AS tg16,
+ round(vstatsrez_tgc.statsrez_tgc[17], 4) AS c17,
+ round(vstatsrez_tgc.statsrez_tgc[18], 4) AS tg18,
+ round(vstatsrez_tgc.statsrez_tgc[19], 4) AS c19,
+ round(vstatsrez_tgc.statsrez_tgc[20], 4) AS tg20,
+ round(vstatsrez_tgc.statsrez_tgc[21], 4) AS c21,
+ round(vstatsrez_tgc.statsrez_tgc[22], 4) AS tg22,
+ round(vstatsrez_tgc.statsrez_tgc[23], 4) AS c23,
+ round(vstatsrez_tgc.statsrez_tgc[24], 4) AS tg24,
+ round(vstatsrez_tgc.statsrez_tgc[25], 4) AS c25,
+ vstatsrez_tgc.statsrez_tgc[26:] AS tgc26,
+ tgtodegrestr(vstatsrez_tgc.statsrez_tgc[4]) AS f4,
+ tgtodegrestr(vstatsrez_tgc.statsrez_tgc[6]) AS f6,
+ tgtodegrestr(vstatsrez_tgc.statsrez_tgc[8]) AS f8,
+ tgtodegrestr(vstatsrez_tgc.statsrez_tgc[14]) AS f14,
+ tgtodegrestr(vstatsrez_tgc.statsrez_tgc[16]) AS f16,
+ tgtodegrestr(vstatsrez_tgc.statsrez_tgc[18]) AS f18,
+ tgtodegrestr(vstatsrez_tgc.statsrez_tgc[20]) AS f20,
+ tgtodegrestr(vstatsrez_tgc.statsrez_tgc[22]) AS f22,
+ tgtodegrestr(vstatsrez_tgc.statsrez_tgc[24]) AS f24,
+ idobrazec.numdoc,
+ idobrazec.sost,
+ idobrazec.sost_2,
+ idobrazec.prover,
+ idobrazec.prover_2
+FROM vstatsrez_tgc, idobrazec, vbureholejurn
+WHERE vstatsrez_tgc.id_obrazec = idobrazec.id AND vstatsrez_tgc.id_burehole = vbureholejurn.id]]>
+	</queryString>
+	<field name="ige" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="ige"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vstatsrez_tgc"/>
+		<property name="com.jaspersoft.studio.field.name" value="ige"/>
+		<fieldDescription><![CDATA[Инженерно-геологический элемент (ИГЭ)]]></fieldDescription>
+	</field>
+	<field name="name_strate" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="name_strate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vstatsrez_tgc"/>
+	</field>
+	<field name="shema" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="shema"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vstatsrez_tgc"/>
+	</field>
+	<field name="logo" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.label" value="logo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="vbureholejurn"/>
+	</field>
+	<field name="tgc1" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="tgc1"/>
+	</field>
+	<field name="tgc2" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="tgc2"/>
+	</field>
+	<field name="tgc3" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="tgc3"/>
+	</field>
+	<field name="tg4" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="tg4"/>
+	</field>
+	<field name="c5" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="c5"/>
+	</field>
+	<field name="tg6" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="tg6"/>
+	</field>
+	<field name="c7" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="c7"/>
+	</field>
+	<field name="tg8" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="tg8"/>
+	</field>
+	<field name="c9" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="c9"/>
+	</field>
+	<field name="tg10" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="tg10"/>
+	</field>
+	<field name="c11" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="c11"/>
+	</field>
+	<field name="tg12" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="tg12"/>
+	</field>
+	<field name="c13" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="c13"/>
+	</field>
+	<field name="tg14" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="tg14"/>
+	</field>
+	<field name="c15" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="c15"/>
+	</field>
+	<field name="tg16" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="tg16"/>
+	</field>
+	<field name="c17" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="c17"/>
+	</field>
+	<field name="tg18" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="tg18"/>
+	</field>
+	<field name="c19" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="c19"/>
+	</field>
+	<field name="tg20" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="tg20"/>
+	</field>
+	<field name="c21" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="c21"/>
+	</field>
+	<field name="tg22" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="tg22"/>
+	</field>
+	<field name="c23" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="c23"/>
+	</field>
+	<field name="tg24" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="tg24"/>
+	</field>
+	<field name="c25" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="c25"/>
+	</field>
+	<field name="tgc26" class="java.sql.Array">
+		<property name="com.jaspersoft.studio.field.label" value="tgc26"/>
+	</field>
+	<field name="f4" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="f4"/>
+	</field>
+	<field name="f6" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="f6"/>
+	</field>
+	<field name="f8" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="f8"/>
+	</field>
+	<field name="f14" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="f14"/>
+	</field>
+	<field name="f16" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="f16"/>
+	</field>
+	<field name="f18" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="f18"/>
+	</field>
+	<field name="f20" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="f20"/>
+	</field>
+	<field name="f22" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="f22"/>
+	</field>
+	<field name="f24" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="f24"/>
+	</field>
+	<field name="numdoc" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="numdoc"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="idobrazec"/>
+	</field>
+	<field name="sost" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="sost"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="idobrazec"/>
+	</field>
+	<field name="sost_2" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="sost_2"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="idobrazec"/>
+	</field>
+	<field name="prover" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="prover"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="idobrazec"/>
+	</field>
+	<field name="prover_2" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="prover_2"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="idobrazec"/>
+	</field>
+	<group name="ige" isStartNewPage="true" isResetPageNumber="true">
+		<groupExpression><![CDATA[$F{ige}]]></groupExpression>
+		<groupHeader>
+			<band height="100" splitType="Stretch">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<staticText>
+					<reportElement x="20" y="0" width="459" height="80" printWhenGroupChanges="ige" uuid="417a79ef-c870-4e3f-b018-2a2f699d501d">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Паспорт
+статистичної обробки
+результатів випробувань грунтів
+методом одноплощинного зрізу
+  за показниками tg(φ) і питомого зчеплення (c)]]></text>
+				</staticText>
+				<image>
+					<reportElement x="0" y="10" width="64" height="64" uuid="ca47bf1c-3564-43be-933e-b580b0de0e3c">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<imageExpression><![CDATA[$F{logo}]]></imageExpression>
+				</image>
+				<textField isStretchWithOverflow="true">
+					<reportElement stretchType="ContainerHeight" x="0" y="80" width="480" height="20" uuid="d7b5aabb-f2d0-4596-a67a-54c88ab4c256">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+						<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+						<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="1.0"/>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" isBold="true"/>
+						<paragraph leftIndent="5" rightIndent="5" spacingBefore="5" spacingAfter="5"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Інженерно-геологічний елемент (ІГЕ): " + $F{ige} + "\nОпис: " + $F{name_strate} + "\nСхема випробування: " + $F{shema}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="20">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="300" y="0" width="180" height="20" printWhenGroupChanges="ige" uuid="2386b677-567d-4ef4-b96b-8d5fb228cd1a"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{numdoc}.length() > 0,"Додаток " + $F{numdoc}, "")]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="520" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="35" width="400" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="42f3dc20-07ea-4149-83bc-626a1453580f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Кількість циклів статистичної перевірки]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="0" y="5" width="480" height="30" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" backcolor="#E6E6E6" uuid="38c1a51d-3276-45c3-a364-f94bb82e9338"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans"/>
+				</textElement>
+				<text><![CDATA[Показники результатів випробувань грунтів
+методом одноплощинного зрізу]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="55" width="400" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="94697b7c-eb90-49c0-98ee-0428f0e1e97b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Кількість показників прийнятих до обробки]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="75" width="400" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="140567f0-8f0c-4aeb-b8d6-d8213074e189">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Кількість показників після обробки]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="400" y="35" width="80" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="dc91d97c-447c-4890-bfbb-677e11c0cc1c">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tgc1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="400" y="55" width="80" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="d45874c6-d0a4-439e-8422-f59849ee2127">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tgc2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="400" y="75" width="80" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="ce465e04-e010-41f3-88aa-b5bfbdc8ef9a">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tgc3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="400" y="115" width="80" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="11861520-178b-4da8-b1d9-5715320fd178">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{tg4} == null,"-",$F{tg4})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="400" y="175" width="80" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="7b925126-a295-4f36-a79d-ff466c808f76">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{tg6} == null, "-", $F{tg6})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="115" width="400" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="17361455-a1cf-46d5-b551-564722dc1e15">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Мінімальний показник тангенса кута внутрішнього тертя tg(φ)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="175" width="400" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="10f0cc37-8b44-4122-9291-336bd79f20d7">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Максимальний показник тангенса кута внутрішнього тертя tg(φ)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="235" width="400" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="3e567028-890e-475c-b62e-6761b74c6afb">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Нормативний показник тангенса кута внутрішнього тертя tg(φ)]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="400" y="235" width="80" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="6f7a0d17-b2ef-4cd4-b43b-6036a0b5ddc7">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{tg8} == null, "-", $F{tg8})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="295" width="400" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="406782e0-4ccf-4d21-b04b-ae923af298e7">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Середнє квадратичне відхилення тангенса кута внутрішнього тертя tg(φ)]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="400" y="295" width="80" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="037ad9f8-215c-4f61-b338-834320f75c92">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{tg10} == null, "-", $F{tg10})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="400" y="355" width="80" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="d6ab04a1-bb2d-4c67-9967-dc00d858275f">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{c13} == null, "-", $F{c13})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="355" width="400" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="f1753cff-155f-4751-8b04-45838404d96f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Коефіцієнт варіації питомого зчеплення (c)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="180" y="375" width="300" height="40" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" backcolor="#E6E6E6" uuid="e8c1b20a-1816-44fe-8b52-106fc20dd6cf">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="10" rightIndent="10"/>
+				</textElement>
+				<text><![CDATA[Розрахункові показники
+при односторонній довірчої ймовірності,
+що дорівнює:]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="180" y="435" width="50" height="30" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="282a3bd6-f896-4e72-b229-c68a60b4667d">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{tg14} == null,"-", $F{tg14})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="230" y="435" width="50" height="30" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="a209806a-7449-435a-9d15-df9a36b9eec7">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{tg16} == null, "-", $F{tg16})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="280" y="435" width="50" height="30" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="7c97078e-9b57-4ff8-ab0f-b2138a37bd3a">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{tg18} == null, "-", $F{tg18})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="330" y="435" width="50" height="30" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="a9b4e8c8-87a7-4a8f-a0da-75f139a61167">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{tg20} == null, "-", $F{tg20})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="380" y="435" width="50" height="30" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="aa920582-0185-442b-bbaa-04c4da6884ec">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{tg22} == null, "-", $F{tg22})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="430" y="435" width="50" height="30" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="02e41910-b0cc-4de1-85b9-483cd1557849">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{tg24} == null, "-", $F{tg24})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="180" y="415" width="50" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" backcolor="#E6E6E6" uuid="ad66e1ab-e001-4b6a-8a66-15015e4257bb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[0.85]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="230" y="415" width="50" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" backcolor="#E6E6E6" uuid="68986bbc-075b-464d-801d-2e6a50cd07a5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[0.90]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="280" y="415" width="50" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" backcolor="#E6E6E6" uuid="e00de747-e372-4a51-9b63-626acab99ab4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[0.95]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="330" y="415" width="50" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" backcolor="#E6E6E6" uuid="ae837d36-a094-4e1f-a33d-cd29e6be28c5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[0.975]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="380" y="415" width="50" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" backcolor="#E6E6E6" uuid="c1975bda-2d49-4dd6-a978-c64afc0ac7b5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[0.98]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="430" y="415" width="50" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" backcolor="#E6E6E6" uuid="7b20b800-8182-419e-ba75-cc4dc28df9a8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[0.99]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="0" y="95" width="480" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="8c74dddf-9680-4b18-a0e0-1a335e375841">
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Виключені з обробки показники: " + $F{tgc26}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="155" width="400" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="7cc6dca1-9ead-453a-9ae1-8b999fde0f25">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Мінімальний показник питомого зчеплення (c), МПа]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="400" y="155" width="80" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="9c029548-6dba-4e23-8627-8f8ee12b9425">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{c5} == null,"-",$F{c5})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="215" width="400" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="10bd193c-4a88-450a-990d-085d59809236">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Максимальний показник питомого зчеплення (c), МПа]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="400" y="215" width="80" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="6bc7cf22-15b1-45c5-b71c-4114a0ca4f52">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{c7} == null, "-", $F{c7})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="275" width="400" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="55140d11-13de-4b86-9cfe-50f8392afb7e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Нормативний показник питомого зчеплення (c), МПа]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="400" y="275" width="80" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="299e619b-fc84-4c73-bdba-20956efd095d">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{c9} == null, "-", $F{c9})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="315" width="400" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="f2c20594-f870-46b6-808f-f647129fb90d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Середнє квадратичне відхилення питомого зчеплення (c)]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="400" y="315" width="80" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="4a259c65-d122-4b34-ae0b-cb69534fcfaa">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{c11} == null, "-", $F{c11})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="400" y="335" width="80" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="246d1c3a-7739-4143-b5d9-c7400651e4b4">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{tg12} == null, "-", $F{tg12})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="335" width="400" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="f25f4e52-7d59-4aa2-8c0f-b2084e4f4602">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Коефіцієнт варіації тангенса кута внутрішнього тертя tg(φ)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="0" y="375" width="180" height="60" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" backcolor="#E6E6E6" uuid="acf39ca3-677a-44d2-b902-b47f484b0d2a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="10" rightIndent="10"/>
+				</textElement>
+				<text><![CDATA[Показники]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="435" width="180" height="30" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="c4c74ddd-5560-4fc1-baaa-3d3a761e01d0">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Тангенс кута внутрішнього тертя, tg(φ)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="465" width="180" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="80f57c48-cc1e-484f-a9a7-1bf0da394c56">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Кут внутрішнього тертя, (φ)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="485" width="180" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="6c3df019-701c-4a33-bad6-d8260fb8646c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Питоме зчеплення (с), МПа]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="180" y="465" width="50" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="faadaebb-cde9-4d0f-9dc5-a81514f65c78">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{f14} == null, "-", $F{f14})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="180" y="485" width="50" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="816a2a6d-8317-4f82-8121-65f6f36c6d12">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{c15} == null,"-", $F{c15})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="230" y="465" width="50" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="63dd56ab-69e1-4d60-9dc1-4a5f34c35f6f">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{f16} == null, "-", $F{f16})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="230" y="485" width="50" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="e8f13b7b-a80f-4a58-827b-6a9af71b9142">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{c17} == null,"-", $F{c17})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="280" y="465" width="50" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="dc91b83d-ae9e-4a70-813f-7e31595db781">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{f18} == null, "-", $F{f18})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="280" y="485" width="50" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="a23335e5-1871-4021-ac14-7f66632264aa">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{c19} == null,"-", $F{c19})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="330" y="465" width="50" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="53d3c532-d57b-430a-8bd1-cb8b79541945">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{f20} == null, "-", $F{f20})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="330" y="485" width="50" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="fa59250d-2e3e-4ec8-b781-59c28fd9b2db">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{c21} == null,"-", $F{c21})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="380" y="465" width="50" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="4d6b7f51-3e1f-4186-bf37-920942545758">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{f22} == null, "-", $F{f22})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="380" y="485" width="50" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="15223746-1cf7-4081-a278-e5c6b97a34df">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{c23} == null,"-", $F{c23})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="430" y="465" width="50" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="e9084c4b-d78c-4817-9de1-eccf9be3bc66">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{f24} == null, "-", $F{f24})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="430" y="485" width="50" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="0ab23c54-daaf-430c-96ae-9c57b08f996d">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{c25} == null,"-", $F{c25})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="135" width="400" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="56b52fcc-ed5e-42f0-a112-bfadc890da23">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Мінімальний показник кута внутрішнього тертя (φ)]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="400" y="135" width="80" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="10a7a18f-37d4-424b-8266-dd3c018b74a5">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{f4} == null,"-",$F{f4})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="400" y="195" width="80" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="ca6180c6-bafd-4baf-828c-bcb73cc19296">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{f6} == null, "-", $F{f6})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="195" width="400" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="68fc579e-0976-405f-bfe3-6fa84256e322">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Максимальний показник кута внутрішнього тертя (φ)]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="400" y="255" width="80" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="2a8a7a13-9d26-471e-9f68-0dc908b5dd1f">
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{f8} == null, "-", $F{f8})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="255" width="400" height="20" isRemoveLineWhenBlank="true" printWhenGroupChanges="ige" uuid="ee535d99-8b98-4e71-996e-95f7f2f3796f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="10"/>
+					<paragraph leftIndent="5" rightIndent="5"/>
+				</textElement>
+				<text><![CDATA[Нормативний показник кута внутрішнього тертя (φ)]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<summary>
+		<band height="50" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout"/>
+			<textField>
+				<reportElement x="180" y="0" width="300" height="20" uuid="10aa7f70-40d0-4e69-8016-cb84858fa0d5">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{sost}.length() > 0," ____________________ " + $F{sost}, "")]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="ElementGroupBottom" x="0" y="0" width="180" height="20" uuid="4c09b80f-34a0-4c51-bcef-0bd08f869011"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{sost_2}.length() > 0,"Склав: " + $F{sost_2}, "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="30" width="300" height="20" uuid="907cda14-855b-4c56-b048-b989db050f61">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{prover}.length() > 0," ____________________ " + $F{prover}, "")]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement stretchType="ElementGroupBottom" x="0" y="30" width="180" height="20" uuid="bc4f9dfd-238a-4693-a33f-80158b22619e"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="DejaVu Sans" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[IF($F{prover_2}.length() > 0,"Перевірив: " + $F{prover_2}, "")]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
